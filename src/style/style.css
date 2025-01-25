@@ -1,0 +1,82 @@
+:root {
+
+}
+
+/* * {
+  outline: 2px solid blue;
+} */
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* --------------------------------TopAd------------------------------- */
+/* -------------------------------------------------------------------- */
+.top-ad {
+  background-color: #E45E5D;
+  height: 40px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.top-ad p {
+  font-family: "Questrial", serif;
+  color: #fff;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* -------------------------------Header------------------------------- */
+/* -------------------------------------------------------------------- */
+.header {
+  height: 100px;
+  width: 1440px;
+  margin-inline: auto;
+  padding-inline: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid pink;
+}
+
+.logo span {
+  font-size: 25px;
+  font-family: "Pacifico", serif;
+}
+
+.header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 54px;
+}
+
+.header nav ul li {
+  font-size: 17.5px;
+  font-family: "Source Serif 4", serif;
+  color: #000;
+  cursor: pointer;
+}
+
+.header nav ul li:first-child {
+  color: #E55F60;
+}
+
+.header nav ul li:nth-child(2)::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: ' \f107';
+  font-size: 17.5px;
+  color: #000;
+}
+
