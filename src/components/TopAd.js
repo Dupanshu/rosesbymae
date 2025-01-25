@@ -1,7 +1,7 @@
 function TopAd() {
   return (
     <div className='top-ad'>
-      <p>Free Delivery over $30.</p>
+      <p>Free delivery on order over $30.</p>
     </div>
   );
 }

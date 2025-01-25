@@ -14,7 +14,7 @@ function Header(props) {
           </nav>
         </div>
 
-        <div>
+        <div className="cart-side">
           {props.cartSide.map(cartItem => (
             <div>{cartItem}</div>
           ))}
