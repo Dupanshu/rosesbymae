@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Dupanshu/rosesbymae.git/static/css/main.5e107755.css",
+    "main.js": "/Dupanshu/rosesbymae.git/static/js/main.2619fa2c.js",
+    "index.html": "/Dupanshu/rosesbymae.git/index.html",
+    "main.5e107755.css.map": "/Dupanshu/rosesbymae.git/static/css/main.5e107755.css.map",
+    "main.2619fa2c.js.map": "/Dupanshu/rosesbymae.git/static/js/main.2619fa2c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e107755.css",
+    "static/js/main.2619fa2c.js"
+  ]
+}
