@@ -3,6 +3,7 @@ import TopAd from "./components/TopAd";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 import { PiFlowerTulip } from "react-icons/pi";
+import Banner from "./components/Banner";
 
 function App() {
   const companyName = 'EternalRosesByMae';
@@ -12,7 +13,8 @@ function App() {
   return (
     <>
     <TopAd />
-    <Header logo={companyName} list={navItems} cartSide={cartItems}/>
+    <Header logo={companyName} list={navItems} cartSide={cartItems} />
+    <Banner />
     </>
   );
 }
