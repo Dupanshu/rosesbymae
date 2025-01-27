@@ -1,9 +1,10 @@
+import { Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import TopAd from "./components/TopAd";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 import { PiFlowerTulip } from "react-icons/pi";
-import Banner from "./components/Banner";
+import Home from './pages/Home';
 
 function App() {
   const companyName = 'EternalRosesByMae';
@@ -11,11 +12,13 @@ function App() {
   const cartItems = [<IoSearchOutline />, <IoHeartOutline />, <PiFlowerTulip />]
 
   return (
-    <>
+    <main>
     <TopAd />
     <Header logo={companyName} list={navItems} cartSide={cartItems} />
-    <Banner />
-    </>
+    <Routes>
+      <Route exact path='/' element={<Home />} />
+    </Routes>
+    </main>
   );
 }
 
