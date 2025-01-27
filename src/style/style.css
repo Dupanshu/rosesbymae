@@ -1,5 +1,11 @@
 :root {
-
+  --top-ad-bk: #E45E5D;
+  --header-brdr-clr: #F9DDF1;
+  --pacifo-font: "Pacifico", serif;
+  --source-font: "Source Serif 4", serif;
+  --top-ad-font: "Questrial", serif;
+  --button-clr: #C35F69;
+  --body-bk: #FEFAFD;
 }
 
 /* * {
@@ -7,7 +13,7 @@
 } */
 
 .container {
-  width: min(100% - 30px, 1080px);
+  width: min(100% - 30px, 1220px);
   margin-inline: auto;
 }
 
@@ -22,7 +28,7 @@ body {
 /* --------------------------------TopAd------------------------------- */
 /* -------------------------------------------------------------------- */
 .top-ad {
-  background-color: #E45E5D;
+  background-color: var(--top-ad-bk);
   height: 40px;
   width: 100%;
   display: grid;
@@ -30,7 +36,7 @@ body {
 }
 
 .top-ad p {
-  font-family: "Questrial", serif;
+  font-family: var(--top-ad-font);
   color: #fff;
 }
 
@@ -46,7 +52,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 0.5px solid pink;
+  border-bottom: 0.5px solid var(--header-brdr-clr);
 }
 
 .logo span {
@@ -110,7 +116,89 @@ body {
 }
 
 .banner .left-side {
-  width: 620px;
-  outline: 2px solid blue;
+  margin-top: 80px;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23px;
+  /* outline: 2px solid blue; */
+}
+
+.banner .left-side p {
+  font-size: 36px;
+  font-family: "Source Serif 4", serif;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.2px;
+}
+
+.banner .left-side p span {
+  display: block;
+}
+
+.banner .left-side p span:nth-child(2) {
+  font-family: "Pacifico", serif;
+}
+
+.banner .left-side button {
+  padding: 6px 24px;
+  display: block;
+  font-family: var(--pacifo-font);
+  font-size: 32px;
+  font-weight: 500;
+  border: 3px solid var(--button-clr);
+  border-radius: 6px;
+  background-color: var(--button-clr);
+  color: var(--body-bk);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.banner .left-side button:last-child {
+  background-color: transparent;
+  color: var(--button-clr);
+}
+
+.banner .left-side button span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(172 27 42 / 80%);
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Prevent the span from blocking any interactions */
+  z-index: -1;
+}
+
+/* Hover state: Expand the span */
+.banner .left-side button:hover span {
+  width: 300%;
+  height: 300%;
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+}
+
+.banner .left-side button:hover {
+  background-color: transparent;
+  color: var(--body-bk);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
