@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/rosesbymae/static/css/main.c5166f85.css",
-    "main.js": "/rosesbymae/static/js/main.b4519f17.js",
+    "main.css": "/rosesbymae/static/css/main.3fa3128b.css",
+    "main.js": "/rosesbymae/static/js/main.cf7a7b32.js",
+    "static/media/pic1.png": "/rosesbymae/static/media/pic1.0d7a11e06c6b0f4b88fa.png",
+    "static/media/pic2.png": "/rosesbymae/static/media/pic2.71fefbbf1a01077e1bc9.png",
     "index.html": "/rosesbymae/index.html",
-    "main.c5166f85.css.map": "/rosesbymae/static/css/main.c5166f85.css.map",
-    "main.b4519f17.js.map": "/rosesbymae/static/js/main.b4519f17.js.map"
+    "main.3fa3128b.css.map": "/rosesbymae/static/css/main.3fa3128b.css.map",
+    "main.cf7a7b32.js.map": "/rosesbymae/static/js/main.cf7a7b32.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5166f85.css",
-    "static/js/main.b4519f17.js"
+    "static/css/main.3fa3128b.css",
+    "static/js/main.cf7a7b32.js"
   ]
 }
