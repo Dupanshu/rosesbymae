@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import pic1 from '../media/pic1.png';
+import pic2 from '../media/pic2.png';
 
 function Banner(props) {
   const [buttonOnePosition, setButtonOnePosition] = useState({ x: 0, y: 0 });
@@ -71,7 +73,11 @@ function Banner(props) {
           </button>
         </div>
       </div>
-      <div></div>
+
+      {/* right side */}
+      <div className="bnr-rgt"></div>
+      <div><img src={pic1} alt='Pic1' title='Pic1'/></div>
+      <div><img src={pic2} alt='Pic2' title='Pic2'/></div>
     </div>
   );
 }

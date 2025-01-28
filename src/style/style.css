@@ -6,6 +6,7 @@
   --top-ad-font: "Questrial", serif;
   --button-clr: #C35F69;
   --body-bk: #FEFAFD;
+  --btn-hover-clr: rgb(172, 27, 42);
 }
 
 .container {
@@ -108,7 +109,7 @@ body {
 /* -------------------------------Banner------------------------------- */
 /* -------------------------------------------------------------------- */
 .banner {
-
+  position: relative;
 }
 
 .banner .left-side {
@@ -195,5 +196,17 @@ body {
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+}
+
+.banner .bnr-rgt {
+  position: absolute;
+  top: 225px;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  height: 610px;
+  width: 58%;
+  background-color: var(--header-brdr-clr);
+  border-radius: 32px 0px 0px 0px;
+  z-index: -1;
 }
 
