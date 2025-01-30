@@ -76,8 +76,8 @@ function Banner(props) {
 
       {/* right side */}
       <div className="bnr-rgt"></div>
-      <div><img src={pic1} alt='Pic1' title='Pic1'/></div>
-      <div><img src={pic2} alt='Pic2' title='Pic2'/></div>
+      <div><img src={pic1} alt='Pic1' title='Pic1' className="img1"/></div>
+      <div><img src={pic2} alt='Pic2' title='Pic2' className="img2"/></div>
     </div>
   );
 }
