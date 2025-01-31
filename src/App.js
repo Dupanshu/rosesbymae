@@ -5,6 +5,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 import { PiFlowerTulip } from "react-icons/pi";
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 
 function App() {
   const companyName = 'EternalRosesByMae';
@@ -17,6 +18,7 @@ function App() {
     <Header logo={companyName} list={navItems} cartSide={cartItems} />
     <Routes>
       <Route exact path='/' element={<Home />} />
+      <Route exact path='*' element={<NotFound />} />
     </Routes>
     </main>
   );
