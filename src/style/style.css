@@ -22,6 +22,18 @@ body {
 }
 
 
+
+/* Text selection color */
+::-moz-selection {
+  color: #fff;
+  background: var(--button-clr);
+}
+
+::selection {
+  color: #fff;
+  background:  var(--button-clr);
+}
+
 /* -------------------------------------------------------------------- */
 /* --------------------------------TopAd------------------------------- */
 /* -------------------------------------------------------------------- */
@@ -36,6 +48,7 @@ body {
 .top-ad p {
   font-family: var(--top-ad-font);
   color: #fff;
+  letter-spacing: 0.2px;
 }
 
 
@@ -54,7 +67,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 0.5px solid var(--header-brdr-clr);
+  border-radius: 32px;
+  border-bottom: 2px solid var(--header-brdr-clr);
 }
 
 .logo span {
@@ -73,6 +87,7 @@ header {
 .header nav ul li {
   font-size: 18px;
   font-family: "Source Serif 4", serif;
+  font-weight: 550;
   color: #000;
   cursor: pointer;
 }
@@ -230,5 +245,53 @@ header {
   left: 65%;
   transform: translate(-50%, -50%) rotate(-20.65deg);
   z-index: -1;
+}
+
+/* -------------------------------------------------------------------- */
+/* -----------------------Not Found Page------------------------------- */
+/* -------------------------------------------------------------------- */
+.not-found {
+  height: calc(100vh - 140px);
+  display: grid;
+  place-items: center;
+  background: url(../media/404.jpg) center center / cover no-repeat;
+}
+
+.not-found .cntr {
+  display: grid;
+  place-items: center;
+}
+
+.not-found .cntr h1 {
+  color: var(--body-bk);
+  font-size: 52px;
+  letter-spacing: 1%;
+  font-family: var(--pacifo-font);
+  text-align: center;
+}
+
+.not-found .cntr h1 span {
+  display: block;
+}
+
+.not-found .cntr button {
+  margin-top: 22px;
+  padding: 2px;
+  display: block;
+  font-family: var(--pacifo-font);
+  letter-spacing: 1%;
+  font-size: 32px;
+  font-weight: 550;
+  background-color: transparent;
+  color: var(--body-bk);
+  cursor: pointer;
+  border-bottom: 2px solid var(--body-bk);
+  transition: all 0.4s ease-in-out;
+}
+
+.not-found .cntr button:hover {
+  color: var(--header-brdr-clr);
+  padding-inline: 10px;
+  border-color: var(--header-brdr-clr);
 }
 

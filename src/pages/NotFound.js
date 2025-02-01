@@ -1,9 +1,14 @@
-import image404 from '../media/404.jpg';
+import { Link } from 'react-router-dom';
 
 function NotFound() {
   return (
-    <div className="">
-      <img src={image404} alt="404 page" title="404 image" />
+    <div className="not-found">
+      <div className="cntr">
+        <h1>Sorry....<span>This page doesn't exist.</span></h1>
+        <Link to='/'>
+          <button>Back To Home</button>
+        </Link>
+      </div>
     </div>
   );
 }
