@@ -9,8 +9,42 @@ import NotFound from './pages/NotFound';
 
 function App() {
   const companyName = 'EternalRosesByMae';
-  const navItems = ["Home", "Collections", "About", "FAQ", "Contact"];
-  const cartItems = [<IoSearchOutline />, <IoHeartOutline />, <PiFlowerTulip />]
+  const navItems = [
+    {
+      id: 1,
+      text: "Home"
+    }, 
+    {
+      id: 2,
+      text: "Collections"
+    }, 
+    {
+      id: 3,
+      text: "About"
+    }, 
+    {
+      id: 4,
+      text: "FAQ"
+    }, 
+    {
+      id: 5,
+      text: "Contact"
+    }
+  ];
+  const cartItems = [
+    {
+      id: 6,
+      icon: <IoSearchOutline />
+    }, 
+    {
+      id: 7,
+      icon: <IoHeartOutline />
+    }, 
+    {
+      id: 8,
+      icon: <PiFlowerTulip />
+    }
+  ]
 
   return (
     <main>
