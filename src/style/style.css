@@ -20,13 +20,18 @@
   margin-inline: auto;
 }
 
+.container3 {
+  width: min(100% - 30px, 1440px);
+  margin-inline: auto;
+  padding: 59px 55px 111px 55px;
+}
+
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
 }
-
 
 
 /* Text selection color */
@@ -265,11 +270,9 @@ header {
 /* -----------------------------SECTION1------------------------------- */
 /* -------------------------------------------------------------------- */
 .section1 {
-  position: relative;
-  /* translate: 0% 173%; */
-  margin-top: 172px;
-  padding: 59px 55px 111px 55px;
   background-color: var(--body-bk);
+  /* background-image: linear-gradient(20deg, var(--header-brdr-clr), var(--body-bk) 50%); */
+  margin-top: 172px;
 }
 
 .section1 h1 {
@@ -290,17 +293,19 @@ header {
 .section1 .sec1-flex .sec1-flx-div {
   height: 354px;
   width: 288px;
-  border-bottom: 2px solid var(--top-ad-bk);
-  border-radius: 32px;
+  box-shadow: inset rgba(229, 95, 96, 0.45) 0px -5px 11px -5px;
+  border-radius: 22px;
   transition: all 250ms ease-in-out;
+  background-color: var(--body-bk);
 }
 
 .section1 .sec1-flex .sec1-flx-div:hover {
-  scale: 1.015;
+  cursor: pointer;
+  box-shadow: inset rgba(229, 95, 96, 0.25) 0px -5px 11px -5px, rgba(229, 95, 96, 0.3) 0px 8px 16px -8px;
 }
 
 .section1 .sec1-flex .sec1-flx-div img {
-  border-radius: 32px 32px 0px 0px;
+  border-radius: 22px 22px 0px 0px;
   width: 284px;
   height: auto;
 }
@@ -316,10 +321,12 @@ header {
   font-family: var(--source-font);
   font-size: 22px;
   font-weight: 550;
+  color: #000C66;
 }
 
 .section1 .sec1-flex .sec1-flx-div .prod-info .icn-flx {
   display: flex;
+  gap: 3px;
 }
 
 .section1 .sec1-flex .sec1-flx-div .prod-info div svg {
@@ -327,6 +334,11 @@ header {
   height: 27.16px;
   width: 28px;
   cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.section1 .sec1-flex .sec1-flx-div .prod-info div svg:hover {
+  scale: 1.1;
 }
 
 
