@@ -10,6 +10,10 @@
   --nav-item-hvr-clr: #E55F60;
 }
 
+* {
+  transition: all 0.5s ease-in-out;
+}
+
 .container {
   width: min(100% - 30px, 1220px);
   margin-inline: auto;
@@ -218,7 +222,7 @@ header {
 }
 
 .banner .left-side button:hover {
-  background-color: transparent;
+  background-color: transparent !important;
   color: var(--body-bk);
 }
 
@@ -318,10 +322,12 @@ header {
 }
 
 .section1 .sec1-flex .sec1-flx-div .prod-info div p {
-  font-family: var(--source-font);
+  font-family: var(--charm-font);
   font-size: 22px;
   font-weight: 550;
   color: #000C66;
+  letter-spacing: 0.5px;
+  line-height: normal;
 }
 
 .section1 .sec1-flex .sec1-flx-div .prod-info .icn-flx {
@@ -388,5 +394,88 @@ header {
   color: var(--header-brdr-clr);
   padding-inline: 10px;
   border-color: var(--header-brdr-clr);
+}
+
+/* -------------------------------------------------------------------- */
+/* ---------------------------MobileB v1------------------------------- */
+/* -------------------------------------------------------------------- */
+@media only screen and (max-width: 480px) {
+  /* * {
+    outline: 1px solid blue;
+  } */
+
+  .container {
+    width: min(100% - 23px, 1220px);
+    margin-inline: auto;
+  }
+/* -------------------------------- */
+/* --------------Header------------ */
+/* -------------------------------- */
+  .header {
+    justify-content: center;
+  }
+
+  .header div:nth-child(2), .header div:last-child {
+    display: none;
+  }
+
+
+/* -------------------------------- */
+/* -------------Banner------------- */
+/* -------------------------------- */
+
+  .banner {
+    overflow: hidden;
+  }
+
+  .banner .left-side {
+    margin-top: 0px;
+    padding: 41px 0px;
+    align-items: center;
+  }
+
+  .banner .left-side p {
+    text-align: center;
+    font-size: 30px;
+    line-height: 52px;
+  }
+
+  .banner .left-side button:last-child {
+    background-color: var(--body-bk);
+  }
+
+  .banner .bnr-rgt {
+    z-index: -2;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    border-radius: 0px;
+    height: 100%;
+  }
+
+  .banner div .img1 {
+    z-index: -2;
+    top: 80%;
+    left: 100%;
+  }
+
+  .banner div .img2 {
+    height: 100%;
+    z-index: -2;
+    top: 100%;
+    left: 0%;
+    transform: translate(-50%, -50%) rotate(32.47deg);
+  }
+
+  .banner .left-side button {
+    font-size: 30px;
+  }
+
+/* -------------------------------- */
+/* -----------Section 1------------ */
+/* -------------------------------- */
+  .section1 {
+    display: none;
+  }
 }
 
