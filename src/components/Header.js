@@ -1,3 +1,5 @@
+import { VscThreeBars } from "react-icons/vsc";
+
 function Header(props) {
   return (
     <header>
@@ -19,6 +21,7 @@ function Header(props) {
             <div key={cartItem.id}>{cartItem.icon}</div>
           ))}
         </div>
+        <div className="hmbrgr"><VscThreeBars /></div>
       </div>
     </header>
   );

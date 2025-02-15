@@ -12,6 +12,7 @@
 
 * {
   transition: all 0.5s ease-in-out;
+  cursor: default;
 }
 
 .container {
@@ -81,6 +82,7 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid var(--header-brdr-clr);
+  position: relative;
 }
 
 .logo span {
@@ -146,6 +148,9 @@ header {
   cursor: pointer;
 }
 
+.header .hmbrgr svg {
+  display: none;
+}
 
 /* -------------------------------------------------------------------- */
 /* -------------------------------Banner------------------------------- */
@@ -304,6 +309,9 @@ header {
 }
 
 .section1 .sec1-flex .sec1-flx-div:hover {
+  *{
+    cursor: pointer;
+  }
   cursor: pointer;
   box-shadow: inset rgba(229, 95, 96, 0.25) 0px -5px 11px -5px, rgba(229, 95, 96, 0.3) 0px 8px 16px -8px;
 }
@@ -411,11 +419,27 @@ header {
 /* -------------------------------- */
 /* --------------Header------------ */
 /* -------------------------------- */
+  .container2 {
+    width: 100%;
+  }
+
   .header {
+    height: 70px;
     justify-content: center;
   }
 
-  .header div:nth-child(2), .header div:last-child {
+  .header .hmbrgr svg {
+    display: block;
+    height: auto;
+    width: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translate(-50%, -50%);
+  }
+
+  .header div:nth-child(2), .header div:nth-child(3) {
     display: none;
   }
 
@@ -426,11 +450,12 @@ header {
 
   .banner {
     overflow: hidden;
+    height: calc(100vh - 166.5px);
   }
 
   .banner .left-side {
     margin-top: 0px;
-    padding: 41px 0px;
+    padding: 61px 0px;
     align-items: center;
   }
 
@@ -455,16 +480,17 @@ header {
 
   .banner div .img1 {
     z-index: -2;
-    top: 80%;
-    left: 100%;
+    top: 85%;
+    left: 93%;
+    transform: translate(-50%, -50%) rotate(-18deg);
   }
 
   .banner div .img2 {
-    height: 100%;
+    height: 90%;
     z-index: -2;
     top: 100%;
-    left: 0%;
-    transform: translate(-50%, -50%) rotate(32.47deg);
+    left: -15%;
+    transform: translate(-50%, -50%) rotate(50deg);
   }
 
   .banner .left-side button {
@@ -474,8 +500,44 @@ header {
 /* -------------------------------- */
 /* -----------Section 1------------ */
 /* -------------------------------- */
+
+  .container3 {
+    width: 100%;
+    padding: 25.65px 0px 48.26px 23px;
+  }
+
   .section1 {
-    display: none;
+    margin-top: 0px;
+  }
+
+  .section1 h1 {
+    display: inline-block;
+    font-size: 25px;
+    margin-bottom: 31px;
+    padding-right: 12px;
+    border-bottom: 1px solid var(--top-ad-bk);
+  }
+
+  .section1 .sec1-flex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    overflow: scroll;
+    gap: 16px;
+    padding-right: 23px;
+  }
+
+  .section1 .sec1-flex .sec1-flx-div {
+    height: 318px;
+    width: 259px;
+  }
+
+  .section1 .sec1-flex .sec1-flx-div img {
+    width: 255px;
+  }
+
+  .section1 .sec1-flex .sec1-flx-div .prod-info {
+    padding: 9px 20.17px;
   }
 }
 
