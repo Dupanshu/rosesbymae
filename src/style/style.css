@@ -11,7 +11,6 @@
 }
 
 * {
-  transition: all 0.5s ease-in-out;
   cursor: default;
 }
 
@@ -106,10 +105,7 @@ header {
   font-weight: 550;
   color: #000;
   cursor: pointer;
-}
-
-.header nav ul li:first-child {
-  color: var(--nav-item-hvr-clr);
+  transition: color 500ms ease-in-out;
 }
 
 .header nav ul li:nth-child(2)::after{
@@ -122,13 +118,15 @@ header {
 
 .header nav ul li:hover {
   color: var(--nav-item-hvr-clr);
+  transition: color 150ms ease-in-out !important;
 }
 
 .header nav ul li:nth-child(2):hover::after {
   color: var(--nav-item-hvr-clr);
+  transition: color 150ms ease-in-out;
 }
 
-.cart-side {
+.header .cart-side {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,18 +135,23 @@ header {
   /* margin-left: 273px; */
 }
 
-.cart-side div {
+.header .cart-side div {
   height: auto;
   width: 28px;
 }
 
-.cart-side div svg {
+.header .cart-side div:hover {
+  scale: 1.2;
+  transition: scale 300ms ease-in-out;
+}
+
+.header .cart-side div svg {
   height: auto;
   width: 100%;
   cursor: pointer;
 }
 
-.header .hmbrgr svg {
+.header .hmbrgr {
   display: none;
 }
 
@@ -404,13 +407,11 @@ header {
   border-color: var(--header-brdr-clr);
 }
 
+
 /* -------------------------------------------------------------------- */
 /* ---------------------------MobileB v1------------------------------- */
 /* -------------------------------------------------------------------- */
-@media only screen and (max-width: 480px) {
-  /* * {
-    outline: 1px solid blue;
-  } */
+@media only screen and (max-width: 500px) {
 
   .container {
     width: min(100% - 23px, 1220px);
@@ -423,9 +424,29 @@ header {
     width: 100%;
   }
 
+  .top-ad {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 40px;
+    z-index: 10;
+  }
+
   .header {
     height: 70px;
     justify-content: center;
+  }
+
+  .header .hmbrgr {
+    display: block;
   }
 
   .header .hmbrgr svg {
@@ -439,16 +460,68 @@ header {
     transform: translate(-50%, -50%);
   }
 
-  .header div:nth-child(2), .header div:nth-child(3) {
-    display: none;
+  .header nav ul {
+    position: fixed;
+    top: 310px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    flex-direction: column;
+    gap: 30px;
+    animation: fadeInRight 250ms 1 alternate;
   }
 
+  .header nav ul li {
+    padding: 0px 10px 8px 14px;
+    text-align: center;
+    border-bottom: 2px solid var(--top-ad-bk);
+    font-size: 22px;
+  }
 
+  .header .cart-side {
+    width: auto;
+    position: fixed;
+    flex-direction: column;
+    top: 200px;
+    left: 93%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    gap: 20px;
+    animation: fadeInRight 250ms 1 alternate;
+  }
+/* ------ nav bar visibility------ */
+  .visible {
+    display: block;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+
+  .header .overlay {
+    position: fixed;
+    top: 108px;
+    left: 0%;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: pink;
+    z-index: 1;
+    animation: fadeInRight 250ms 1 alternate;
+  }
+
+  @keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to { opacity: 1 }
+  }
 /* -------------------------------- */
 /* -------------Banner------------- */
 /* -------------------------------- */
 
   .banner {
+    margin-top: 110px;
     overflow: hidden;
     height: calc(100vh - 166.5px);
   }
@@ -515,7 +588,7 @@ header {
     font-size: 25px;
     margin-bottom: 31px;
     padding-right: 12px;
-    border-bottom: 1px solid var(--top-ad-bk);
+    border-bottom: 2px solid var(--top-ad-bk);
   }
 
   .section1 .sec1-flex {
@@ -539,5 +612,21 @@ header {
   .section1 .sec1-flex .sec1-flx-div .prod-info {
     padding: 9px 20.17px;
   }
+
+/* -------------------------------- */
+/* ----------Not Found Page-------- */
+/* -------------------------------- */
+  .not-found {
+    margin-top: 110px;
+  }
+
+  .not-found .cntr h1 {
+    font-size: 32px;
+  }
+
+  .not-found .cntr button {
+    font-size: 26px;
+  }
+
 }
 
