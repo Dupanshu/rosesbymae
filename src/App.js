@@ -6,6 +6,7 @@ import { IoHeartOutline } from "react-icons/io5";
 import { PiFlowerTulip } from "react-icons/pi";
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import Footer from './components/Footer';
 
 function App() {
   const companyName = 'EternalRosesByMae';
@@ -54,6 +55,7 @@ function App() {
       <Route exact path='/' element={<Home />} />
       <Route exact path='*' element={<NotFound />} />
     </Routes>
+    <Footer logo={companyName} />
     </main>
   );
 }
