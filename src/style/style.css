@@ -537,12 +537,17 @@ header {
     text-align: right;
     border-bottom: 2px solid var(--body-bk);
     font-size: 22px;
- }
+  }
+
+  .header nav ul li .navlink {
+    display: block;
+    width: 100%;
+  }
 
  .header nav ul li:hover, .header nav ul li .active {
   color: #000;
   width: 100%;
- }
+  }
 
   .header nav ul li:nth-child(2)::after {
     display: none;

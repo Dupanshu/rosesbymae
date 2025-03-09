@@ -18,7 +18,11 @@ function Header(props) {
           <nav>
             <ul>
               {props.list.map(navItem => (
-                <li key={navItem.id}><NavLink className={({isActive}) => (isActive ? "active" : "")} to={navItem.link}><span>{navItem.text}</span></NavLink></li>
+                <li key={navItem.id}>
+                  <NavLink className={({isActive}) => (isActive ? "active" : "")} to={navItem.link}>
+                    <span className="navlink">{navItem.text}</span>
+                  </NavLink>
+                </li>
               ))}
             </ul>
           </nav>
