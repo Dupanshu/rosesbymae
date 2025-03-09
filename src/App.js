@@ -1,11 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from "./components/Header";
-import TopAd from "./components/TopAd";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 import { PiFlowerTulip } from "react-icons/pi";
+
 import Home from './pages/Home';
+import About from './pages/About';
 import NotFound from './pages/NotFound';
+
+import TopAd from "./components/TopAd";
+import Header from "./components/Header";
 import Footer from './components/Footer';
 
 function App() {
@@ -53,6 +56,7 @@ function App() {
     <Header logo={companyName} list={navItems} cartSide={cartItems} />
     <Routes>
       <Route exact path='/' element={<Home />} />
+      <Route exact path='/about' element={<About />} />
       <Route exact path='*' element={<NotFound />} />
     </Routes>
     <Footer logo={companyName} />
