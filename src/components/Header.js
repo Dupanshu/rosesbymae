@@ -2,6 +2,7 @@ import { useState } from "react";
 import { VscThreeBars } from "react-icons/vsc";
 import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 
 function Header(props) {
@@ -17,7 +18,7 @@ function Header(props) {
           <nav>
             <ul>
               {props.list.map(navItem => (
-                <li key={navItem.id}><span>{navItem.text}</span></li>
+                <li key={navItem.id}><NavLink className={({isActive}) => (isActive ? "active" : "")} to={navItem.link}><span>{navItem.text}</span></NavLink></li>
               ))}
             </ul>
           </nav>

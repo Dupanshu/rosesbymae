@@ -16,23 +16,28 @@ function App() {
   const navItems = [
     {
       id: 1,
-      text: "Home"
+      text: "Home",
+      link: "/"
     }, 
     {
       id: 2,
-      text: "Collections"
+      text: "Collections",
+      link: "/collections"
     }, 
     {
       id: 3,
-      text: "About"
+      text: "About",
+      link: "/about"
     }, 
     {
       id: 4,
-      text: "FAQ"
+      text: "FAQ",
+      link: "/faq"
     }, 
     {
       id: 5,
-      text: "Contact"
+      text: "Contact",
+      link: "/contact"
     }
   ];
   const cartItems = [

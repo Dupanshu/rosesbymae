@@ -9,7 +9,7 @@
   --btn-hover-clr: rgb(172, 27, 42);
   --nav-item-hvr-clr: #E55F60;
   --footer-bk: rgba(172 27 42 / 80%);
-  --menu-wth: 78%;
+  --menu-wth: 88%;
 }
 
 * {
@@ -113,6 +113,9 @@ header {
   color: #000;
   cursor: pointer;
   transition: color 500ms ease-in-out;
+  span {
+    cursor: pointer;
+  }
 }
 
 .header nav ul li:nth-child(2)::after{
@@ -123,7 +126,7 @@ header {
   color: #000;
 }
 
-.header nav ul li:hover {
+.header nav ul li:hover, .header nav ul li .active {
   color: var(--nav-item-hvr-clr);
   transition: color 150ms ease-in-out !important;
 }
@@ -515,7 +518,7 @@ header {
   }
 
   .header nav ul {
-    width: var(--menu-wth);
+    width: 68%;
     position: fixed;
     top: 59%;
     right: 0%;
@@ -536,9 +539,9 @@ header {
     font-size: 22px;
  }
 
- .header nav ul li:hover {
+ .header nav ul li:hover, .header nav ul li .active {
   color: #000;
-  width: 87%;
+  width: 100%;
  }
 
   .header nav ul li:nth-child(2)::after {
