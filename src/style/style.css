@@ -376,7 +376,7 @@ header {
 .footer {
   background-color: var(--footer-bk);
   border-radius: 22px;
-  margin-bottom: 100px;
+  margin: 111px 0px 100px 0px;
   padding: 40px;
 }
 
@@ -387,7 +387,6 @@ header {
 .footer .upper-ftr {
   margin-bottom: 60px;
   padding-inline: 14px;
-
 }
 
 .footer .lower-ftr {
@@ -409,7 +408,7 @@ header {
 .footer .lower-ftr div:last-child a svg {
   cursor: pointer;
   height: auto;
-  width: 18px;
+  width: 24px;
 }
 
 
@@ -693,8 +692,29 @@ header {
 /* -------------------------------- */
 /* -----------footer------------ */
 /* -------------------------------- */
+  .container4 {
+    width: 100%;
+  }
+
   .footer {
-    display: none;
+    margin: 0px;
+    padding: 25px 23px 48.26px 23px;
+    border-radius: 0px;
+  }
+
+  .footer .upper-ftr {
+    margin-bottom: 30px;
+    padding-inline: 0px;
+  }
+
+  .footer .lower-ftr {
+    padding: 18px 0px 0px 0px;
+    flex-direction: row;
+  }
+
+  .footer .lower-ftr div:first-child {
+    flex-direction: column;
+    gap: 14px;
   }
 
 
