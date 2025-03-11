@@ -20,7 +20,7 @@ function Header(props) {
               {props.list.map(navItem => (
                 <li key={navItem.id}>
                   <NavLink className={({isActive}) => (isActive ? "active" : "")} to={navItem.link}>
-                    <span className="navlink">{navItem.text}</span>
+                    <span className="navlink" onClick={() => setNavVisiblity(false)}>{navItem.text}</span>
                   </NavLink>
                 </li>
               ))}
