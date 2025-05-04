@@ -689,14 +689,15 @@ header {
   }
 
   .banner .bnr-rgt .img1 {
+    scale: 1.2;
     z-index: -2;
     top: 85%;
-    left: 93%;
-    transform: translate(-50%, -50%) rotate(-18deg);
+    right: 10%;
+    transform: translate(50%, -50%) rotate(-18deg);
   }
 
   .banner .bnr-rgt .img2 {
-    height: 90%;
+    scale: 0.9;
     z-index: -2;
     top: 100%;
     left: -15%;
@@ -750,6 +751,9 @@ header {
     padding: 9px 20.17px;
   }
 
+  .section1 .background , .section1 .background2 {
+    display: none;
+  }
 
   /* -------------------------------- */
   /* -----------footer------------ */
