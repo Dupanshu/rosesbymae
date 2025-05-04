@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import pic1 from '../media/pic1.png';
 import pic2 from '../media/pic2.png';
+import videoSource from "../media/165306-832460162.mp4";
 
 function Banner(props) {
   const [buttonOnePosition, setButtonOnePosition] = useState({ x: 0, y: 0 });
@@ -34,6 +35,10 @@ function Banner(props) {
   
   return (
     <div className="banner">
+      <video id="video" autoPlay muted loop>
+        <source src={videoSource}
+        type="video/mp4"/>
+      </video>
       <div className="container">
         <div className="left-side">
           <p>
@@ -75,9 +80,10 @@ function Banner(props) {
       </div>
 
       {/* right side */}
-      <div className="bnr-rgt"></div>
-      <div><img src={pic1} alt='Pic1' title='Pic1' className="img1"/></div>
-      <div><img src={pic2} alt='Pic2' title='Pic2' className="img2"/></div>
+      <div className="bnr-rgt">
+        <div><img src={pic1} alt='Pic1' title='Pic1' className="img1"/></div>
+        <div><img src={pic2} alt='Pic2' title='Pic2' className="img2"/></div>
+      </div>
     </div>
   );
 }

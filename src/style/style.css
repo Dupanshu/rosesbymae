@@ -12,14 +12,6 @@
   --menu-wth: 88%;
 }
 
-#video {
-  position: absolute;
-  opacity: 0.06;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 * {
   cursor: default;
 }
@@ -184,10 +176,21 @@ header {
 /* -------------------------------------------------------------------- */
 .banner {
   position: relative;
+  background: transparent;
+  height: 610px;
+}
+
+.banner #video {
+  position: absolute;
+  opacity: 0.04;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
 
 .banner .left-side {
-  margin-top: 80px;
+  padding-top: 80px;
   max-width: 620px;
   display: flex;
   flex-direction: column;
@@ -277,30 +280,32 @@ header {
 
 .banner .bnr-rgt {
   position: absolute;
-  top: 225px;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  height: 610px;
-  width: 58%;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%, -50%);
+  height: 100%;
+  width: 50%;
   background-color: var(--header-brdr-clr);
   border-radius: 32px 0px 0px 32px;
   z-index: -1;
 }
 
-.banner div .img1 {
+.banner .bnr-rgt .img1 {
   position: absolute;
-  top: 15%;
-  left: 95%;
-  transform: translate(-50%, -50%);
+  top: 25%;
+  right: -35%;
+  transform: translate(0%, -50%);
   z-index: -1;
+  pointer-events: none;
 }
 
-.banner div .img2 {
+.banner .bnr-rgt .img2 {
   position: absolute;
-  top: 150%;
-  left: 65%;
+  top: 120%;
+  left: 30%;
   transform: translate(-50%, -50%) rotate(-20.65deg);
   z-index: -1;
+  pointer-events: none;
 }
 
 
@@ -308,9 +313,9 @@ header {
 /* -----------------------------SECTION1------------------------------- */
 /* -------------------------------------------------------------------- */
 .section1 {
-  background-color: var(--body-bk);
-  /* background-image: linear-gradient(20deg, var(--header-brdr-clr), var(--body-bk) 50%); */
-  margin-top: 172px;
+  background: var(--body-bk);
+  overflow: hidden;
+  position: relative;
 }
 
 .section1 h1 {
@@ -322,6 +327,7 @@ header {
 }
 
 .section1 .sec1-flex {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -384,6 +390,23 @@ header {
 
 .section1 .sec1-flex .sec1-flx-div .prod-info div svg:hover {
   scale: 1.1;
+}
+
+.section1 .background {
+  position: absolute;
+  height: 50%;
+  bottom: -28%;
+  left: -4%;
+  pointer-events: none;
+}
+
+.section1 .background2 {
+  transform: rotate(-180deg);
+  position: absolute;
+  height: 50%;
+  top: -28%;
+  right: -4%;
+  pointer-events: none;
 }
 
 
@@ -659,20 +682,18 @@ header {
   .banner .bnr-rgt {
     z-index: -2;
     width: 100%;
-    left: 50%;
-    top: 50%;
     border-radius: 0px;
     height: 100%;
   }
 
-  .banner div .img1 {
+  .banner .bnr-rgt .img1 {
     z-index: -2;
     top: 85%;
     left: 93%;
     transform: translate(-50%, -50%) rotate(-18deg);
   }
 
-  .banner div .img2 {
+  .banner .bnr-rgt .img2 {
     height: 90%;
     z-index: -2;
     top: 100%;
