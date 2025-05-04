@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { IoSearchOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 import { PiFlowerTulip } from "react-icons/pi";
+import videoSource from "./media/165306-832460162.mp4"
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -57,6 +58,10 @@ function App() {
 
   return (
     <main>
+    <video id="video" autoPlay muted loop>
+      <source src={videoSource}
+      type="video/mp4"/>
+    </video>
     <TopAd />
     <Header logo={companyName} list={navItems} cartSide={cartItems} />
     <Routes>
