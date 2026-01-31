@@ -419,7 +419,7 @@ header {
 .footer {
   
   /* border-radius: 22px; */
-  margin: 111px 0px /* 100px */ 0px 0px;
+  margin: /* 111px */0px/* 100px */;
   padding: 40px 40px 0px 40px;
   width: min(100% - 86px, 1700px);
   margin-inline: auto;
